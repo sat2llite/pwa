@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- apple -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- title -->
+    <title>KAKAO - 로그인</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- js -->
+    <script src="./js/main.js"></script>
+    <script>
+      if("serviceWorker" in navigator) {
+        // 브라우저에 서비스워커가 있을 때 (지원여부)
+        navigator.serviceWorker.register("service-worker.js") // 비동기
+        .then((success)=>{
+          console.log("servieceWorker 설치에 성공했습니다", success);
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="login">
+        <h1 class="login_logo">카카오톡</h1>
+
+        <form action="./chatList.html" class="login_form">
+          <input
+            type="text"
+            class="login_form_id"
+            placeholder="카카오계정(이메일 또는 전화번호)"
+          />
+          <input type="password" class="login_form_pw" placeholder="비밀번호" />
+          <input type="submit" class="login_form_btn" value="로그인" />
+          <input type="checkbox" class="login_form_check" id="check" />
+          <label for="check">자동로그인</label>
+        </form>
+
+        <p class="login_account">
+          <a href="">카카오 계정 찾기</a>
+          <span>|</span>
+          <a href="">비밀번호 재설정</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

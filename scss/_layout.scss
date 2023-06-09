@@ -1,0 +1,64 @@
+nav {
+  @include set-box(100%, 70px);
+  background: $opacityBlack;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  cursor: pointer;
+
+  .nav_list {
+    .nav_btn {
+      padding-bottom: 40px;
+      color: $gray2;
+
+      &.active {
+        color: #000;
+      }
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  .logout {
+    color: $gray2;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px 20px;
+  position: sticky; top: 0;
+  z-index: 1;
+  // box-shadow: 0 5px 10px -5px $opacityBlack;
+
+  .header_title {
+    font-size: 1.2rem;
+    span {
+      font-size: 0.8rem;
+    }
+  }
+
+  .header_menu {
+    span {
+      @include set-box(36px, 36px, 18px);
+
+      display: inline-block;
+      text-align: center;
+      line-height: 36px;
+      cursor: pointer;
+      
+      &:hover {
+        background: $opacityBlack;  
+      }
+    }
+  }
+}

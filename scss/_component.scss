@@ -1,0 +1,48 @@
+.preview {
+  display:flex;
+  padding:16px;
+  position: relative;
+
+  .preview_col {       
+    
+
+    &:nth-child(1){
+      margin-right:16px;
+    }
+    .preview_pic{
+      @include set-box(50px, 50px,8px );
+      background:$main-color;
+    }
+    .preview_title{
+      width:50vw;
+      font-size:0.88rem;
+      margin-bottom:6px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+    }
+    .preview_msg {
+      width:50vw;
+      font-size:0.83rem;
+      color:$gray1;
+
+      // 2줄만 보이게 함
+      display: -webkit-box;
+      word-wrap:break-word;
+      -webkit-line-clamp:2;
+      -webkit-box-orient: vertical;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+    }
+
+    .preview_time{
+      position:absolute;
+      right:16px;
+      top:16px;
+      font-size:0.73rem;
+      color:$gray2;
+    }
+  }
+}
